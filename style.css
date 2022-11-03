@@ -1,3 +1,11 @@
+@font-face {
+  font-family: mojfont;
+  src: url('./fonts/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: boldovani;
+  src: url('./fonts/Roboto-Bold.ttf');
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -5,8 +13,7 @@
 }
 
 body {
-
-	font-family: 'Saira', Arial, Helvetica, sans-serif;
+	font-family:mojfont;
 }
 
 html{
@@ -18,6 +25,7 @@ html{
   width: 0px;
 }
 .slika{
+  
   backdrop-filter:blur(5px);
     
   margin-top:30px;
@@ -36,6 +44,7 @@ article{
 }
 
 #slika{
+  box-shadow:0 0 20px black;
   height:100%;
 width:100%;  
 }
@@ -47,8 +56,12 @@ width:100%;
   bottom:-60px;
 
 }
-
-
+.greska{
+ font-size: 21px;
+  color:rgb(255, 0, 0);
+  width:100%;
+  box-shadow: 0 0 10px black;
+}
 
 /*ANIMACIJA POZADINE*/
 
@@ -182,10 +195,19 @@ main span:nth-child(10){
 .naslov{
     margin-top:-150px;
     font-size:60px;
+
+}
+.naslov h2{
+  font-family:boldovani;
+  font-size:60px;
+}
+.naslov p{
+  margin-bottom: 40px;
+  font-size:20px;
 }
 
 /*DUGME*/
-@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
 
 .container2 {
   width: 400px;
@@ -236,10 +258,10 @@ svg {
   stroke-dashoffset: -480;
 }
 
-.btn span {
+.btn p {
   color: white;
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 22px;
+  margin-bottom:0;
 }
 /*Kalendar*/
 
@@ -263,7 +285,8 @@ svg {
 
 
 .calendar {
-    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow:0 0 20px black;
+    font-family: mojfont;
     position: relative;
     max-width: 400px; /*change as per your design need */
     min-width: 200px;
@@ -370,7 +393,7 @@ svg {
 .calendar .calendar-inner .calendar-controls .calendar-next p,
 .calendar .calendar-inner .calendar-controls .calendar-prev p {
     color: var(--calendar-font-color);
-    font-family: arial, consolas, sans-serif;
+    font-family: mojfont;
     font-size: 26px;
     text-decoration: none;
     padding: 2px 12px;
@@ -382,7 +405,7 @@ svg {
 .calendar .calendar-inner .calendar-controls .year-prev p,
 .calendar .calendar-inner .calendar-controls .year-next p {
     color: var(--calendar-font-color);
-    font-family: arial, consolas, sans-serif;
+    font-family: mojfont;
     font-size: 26px;
     text-decoration: none;
     padding: 4px 12px;
@@ -408,13 +431,7 @@ p:hover{
   border: 1px solid transparent;
   pointer-events: none;
 }
-video{
-  height:50vh;
-  backdrop-filter:blur(3px);
-  background-color:rgba(128, 128, 128, 0.39);
-  margin-bottom: 50px;
-  border-radius: 10px;
-}
+
 @media only screen and (max-width: 600px) {
   article{
     height:1000px;

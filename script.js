@@ -1,9 +1,8 @@
-//check the console for date click event
-//Fixed c highlight
-//Added previous month and next month view
+
 
 const API_KEY = "o2YmAs3EdoHYVXhvh2Gnh1JfiuHXRYwOqfqWWGKz";
 function CalendarControl() {
+  const danas=new Date();
     const calendar = new Date();
     const calendarControl = {
       localDate: new Date(),
@@ -87,7 +86,40 @@ function CalendarControl() {
           `${e.target.textContent} ${
             calendar.getMonth()+1
           } ${calendar.getFullYear()}`
-        );
+        ); 
+        /*funckija za gresku-nesto tu ne valja ne gledaj kod nesto sam isprobavao 
+         if(e.target.textContent>danas.getDate() && calendar.getFullYear()>=danas.getFullYear() && calendar.getMonth()>=danas.getMonth()){
+          document.getElementById("greska").innerHTML="Sorry can't see into future";
+        }
+        else if(e.target.textContent>danas.getDate() && calendar.getFullYear()>=danas.getFullYear() &&calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="Sorry can't see into future";
+        }
+        else if(e.target.textContent>danas.getDate() && calendar.getFullYear()>=danas.getFullYear() &&calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="Sorry can't see into future";
+        }
+        else if(e.target.textContent>danas.getDate() && calendar.getFullYear()>danas.getFullYear() &&calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="Sorry can't see into future";
+        }
+       else if(e.target.textContent>danas.getDate() && calendar.getFullYear()==danas.getFullYear() && calendar.getMonth()>=danas.getMonth()){
+          document.getElementById("greska").innerHTML="Sorry can't see into future";
+        }
+        else if(e.target.textContent>=danas.getDate() && calendar.getFullYear()==danas.getFullYear() && calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="";
+        }
+        else if(e.target.textContent<=danas.getDate() && calendar.getFullYear()==danas.getFullYear() && calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="";
+        }
+        else if(e.target.textContent<=danas.getDate() && calendar.getFullYear()>danas.getFullYear() && calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="";
+        }
+        else if(e.target.textContent>=danas.getDate() && calendar.getFullYear()>danas.getFullYear() && calendar.getMonth()<=danas.getMonth()){
+          document.getElementById("greska").innerHTML="";
+        }
+        else{
+          document.getElementById("greska").innerHTML="";
+        }
+        */
+        
         const day =e.target.textContent;
         const month=(calendar.getMonth()+1)
         const year = calendar.getFullYear();

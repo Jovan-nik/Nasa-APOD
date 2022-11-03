@@ -11,8 +11,10 @@
 </head>
 <body>
     <main class="d-flex    align-items-center justify-content-center">
-
-        <h2 class="text-white naslov">APOD NASA</h2>
+      <div class="naslov text-center">
+        <h2 class="text-white ">APOD NASA</h2>
+        <p class="text-white">Astronomy picture of the day</p>
+      </div>
         <div class="container2">
             <div class="center">
               <a href="#kreni"><button class="btn " >
@@ -20,7 +22,7 @@
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <p class="h5">POLECEMO</p>
+                <p class="h5">Start</p>
               </button>
             </a>
             </div>
@@ -41,10 +43,12 @@
     
     <article class="d-flex    align-items-center justify-content-center flex-sm-row flex-column">
     
-  
+      <!--<div class="d-flex align-items-center justify-content-center flex-column ">-->
       <div id="kreni" class="calendar"></div>
+      <!--<p id="greska" class=" bg-dark rounded  text-center greska mt-5"></p>-->
+      </div>
     
-        <div class="slika   col-sm-6 col-9 mx-4">
+        <div class="slika   col-sm-6 col-9 mx-5">
           <img class="rounded-4" src="" alt=""id="slika">
         <img class="lik" src="./images/lik-removebg-preview (1).png">
         </div>
@@ -55,7 +59,7 @@
     </article>
 
 </main>
-<footer class=" text-center bg-black text-lg-start text-white">
+<footer class=" text-center bg-dark text-lg-start text-white">
 
   <section
     class="d-flex  justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -92,7 +96,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3">AAAA</i>
+            <p class="fas fa-gem me-3">NASA-APOD</p>
           </h6>
           <p>
             Sa vama od 2006.
@@ -103,9 +107,7 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Korisni linkovi
           </h6>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Cene</a>
-          </p>
+         
           <p>
             <a href="#!" class="text-reset text-decoration-none" >Podesavanja</a>
           </p>
